@@ -1,0 +1,115 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0 1px 3px -2px #000000;
+  }
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    position: relative;
+    color: black; /* Default color */
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s; /* Add transition for a smoother effect */
+}
+
+.nav-menu li:hover,
+.nav-menu li.selected {
+    color: red; /* Change color on hover or when selected */
+    font-style: bold;
+    font-weight: 600;
+}
+
+.nav-menu li.selected {
+    font-weight: 600;
+}
+
+.nav-menu li::after {
+    content: ""; /* LINE STYLING */
+    display: block;
+    position: absolute;
+    bottom: -3px;  /* Adjusted to make it closer to the text */
+    width: 0;      /* Initially no width for the underline */
+    height: 2px;   /* Adjusted to make it less pronounced */
+    border-radius: 2px; /* Adjusted to make it less pronounced */
+    background: red; 
+    transition: width 0.4s; /* Add transition for a smoother effect */
+}
+
+.nav-menu li:hover::after,
+.nav-menu li.selected::after {
+    width: 100%; /* Show the underline on hover or when selected */
+}
+
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-login-cart button {
+    width: 157px;
+    height: 58px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+
+.nav-login-cart button:active {
+    background: #f3f3f3;
+}
+
+.nav-login-cart img {
+    width: 24px; 
+  }
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: #ff4141;
+    color: #f3f3f3;
+}
